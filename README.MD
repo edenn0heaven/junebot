@@ -2,8 +2,6 @@
 
 June Bot is an open-source Discord bot that generates and analyzes poetry using Large Language Models (LLMs). It provides original poem generation, daily poems, and in-depth literary analysis through an intuitive set of Discord slash commands.
 
----
-
 ## Features
 
 * AI-generated original poems
@@ -14,15 +12,11 @@ June Bot is an open-source Discord bot that generates and analyzes poetry using 
 * Automatic project installer for Windows and Linux
 * Lightweight SQLite database
 
----
-
 ## Requirements
 
 * Python 3.11 or newer
 * A Discord Bot Token
 * An OpenRouter API Key
-
----
 
 ## Installation
 
@@ -48,8 +42,6 @@ Start the bot using:
 launcher.bat
 ```
 
----
-
 ### Linux / macOS
 
 Make the scripts executable:
@@ -71,8 +63,6 @@ Start the bot:
 ./launcher.sh
 ```
 
----
-
 ## Configuration
 
 During installation, a `.env` file is automatically created.
@@ -83,8 +73,6 @@ Fill it with your credentials:
 DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 OPENROUTER_API_KEY=YOUR_OPENROUTER_API_KEY
 ```
-
----
 
 ## Commands
 
@@ -103,21 +91,15 @@ Example:
 /poem @User love
 ```
 
----
-
 ### `/style`
 
 Display all available poetry styles.
-
----
 
 ### `/daily`
 
 Return the poem of the current day.
 
 The poem is generated once per day and stored inside the SQLite database.
-
----
 
 ### `/challenge`
 
@@ -132,8 +114,6 @@ June Bot performs a literary analysis including:
 * rhythm and structure;
 * strengths;
 * suggestions for improvement.
-
----
 
 ## Project Structure
 
@@ -160,8 +140,6 @@ JuneBot/
 └── README.md
 ```
 
----
-
 ## Database
 
 The project uses SQLite.
@@ -174,8 +152,6 @@ CREATE TABLE IF NOT EXISTS daily_poems (
     poem TEXT NOT NULL
 );
 ```
-
----
 
 ## Screenshots
 
@@ -198,8 +174,6 @@ Then referenced as:
 ![Poem Analysis](assets/challenge.png)
 ```
 
----
-
 ## Technologies
 
 * Python
@@ -207,8 +181,6 @@ Then referenced as:
 * OpenAI Python SDK
 * OpenRouter
 * SQLite
-
----
 
 ## Roadmap
 
@@ -219,8 +191,6 @@ Then referenced as:
 * Reading challenges
 * Statistics
 * Additional poetry styles
-
----
 
 ## Contributing
 
@@ -235,14 +205,10 @@ If you would like to contribute:
 
 Please ensure that new code follows the existing project structure and coding style.
 
----
-
 ## License
 
 This project is released under the MIT License.
 
----
-
 ## Author
 
-Developed by Louis.
+Developed by edenn0heaven.
