@@ -7,6 +7,7 @@ from app.poems import generate_poem
 from app.styles import STYLE_LIST, PER_PAGE
 from app.daily import get_today_poem
 from app.challenge import analyze_poem, split_message
+from app.explain import explain_poem, get_poem
 import discord
 import logging
 import os
@@ -145,15 +146,32 @@ async def challenge_cmd(
 
 @bot.tree.command(name="explain", description="Get the previous poem explained")
 async def explain_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("Not yet implemented")
+    await interaction.response.defer()
+
+    try:
+        poem = await get_poem(interaction.channel)
+        explanation = await explain_poem(client, poem)
+        await interaction.followup.send(explanation)
+    except Exception as e:
+        await interaction.followup.send(f"Error:\n```{e}```")
 
 @bot.tree.command(name="save", description="Save the previous poem")
 async def save_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("Not yet implemented")
+    await interaction.response.defer()
+
+    try:
+        pass
+    except Exception as e:
+        await interaction.followup.send(f"Error:\n```{e}```")
 
 @bot.tree.command(name="savelist", description="Show your saved poems")
 async def savelist_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("Not yet implemented")
+    await interaction.response.defer()
+
+    try:
+        pass
+    except Exception as e:
+        await interaction.followup.send(f"Error:\n```{e}```")
 
 # ---------------------------- HELP
 
