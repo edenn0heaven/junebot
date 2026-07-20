@@ -16,7 +16,7 @@ def analyze_poem(client: OpenAI, poem: str) -> str:
                     "the poem works.\n"
                     "Analyze meaning, emotions, structure, and writing "
                     "techniques.\n"
-                    "Your analysis MUST NOT exceed 1500 characters."
+                    "Your analysis MUST NOT exceed 1500 characters, and still be comprehensive and as helpful as possible."
                 ),
             },
             {
@@ -60,7 +60,7 @@ Give constructive advice to make the poem stronger.
 8. Final evaluation
 Give a short overall assessment.
 
-Be detailed, educational, and respectful.
+Be detailed, and educational, but keep your analysis concise and within the character limit. Do not include sections that do not contain any meaningful content.
 """
             },
         ],

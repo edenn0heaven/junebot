@@ -1,10 +1,12 @@
 from openai import OpenAI
 
 async def get_poem(channel):
-    async for message in channel.history(limit=1):
-        return message
+    messages = [message async for message in channel.history(limit=2)]
+    if len(messages) < 2:
+        return None
+    return messages[1].content
 
-async def explain_poem(client: OpenAI, poem: get_poem()) -> str:
+async def explain_poem(client: OpenAI, poem: str) -> str:
     response = client.chat.completions.create(
         model="openai/gpt-4.1-mini",
         temperature=0.3,

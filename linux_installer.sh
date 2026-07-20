@@ -27,6 +27,7 @@ app/poems.py
 app/styles.py
 app/daily.py
 app/challenge.py
+app/explain.py
 db/database.py
 db/db.sql
 db/init_db.py
@@ -97,11 +98,11 @@ read -p "Launch June Bot now? (y/N): " answer
 case "$answer" in
     [Yy]|[Yy][Ee][Ss])
         chmod +x linux_launcher.sh
-        ./launcher.sh
+        ./linux_launcher.sh
         ;;
     *)
         echo
         echo "You can launch June Bot later with:"
-        echo "./launcher.sh"
+        echo "./linux_launcher.sh"
         ;;
 esac

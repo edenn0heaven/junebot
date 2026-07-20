@@ -39,6 +39,7 @@ app\styles.py ^
 app\daily.py ^
 app\challenge.py ^
 db\database.py ^
+app\explain.py ^
 db\db.sql ^
 db\init_db.py ^
 requirements.txt

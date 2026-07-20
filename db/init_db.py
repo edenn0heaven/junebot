@@ -1,3 +1,5 @@
+# This file runs only once during installation
+
 import sqlite3
 from pathlib import Path
 
